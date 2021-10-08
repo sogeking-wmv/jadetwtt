@@ -1,0 +1,14 @@
+Tweeta
+ api.update_status("texto")
+
+Tweeta com imagem
+ api.update_with_media(filename="bot1imgsol.jpg", status="bom dia teste")
+
+Timer
+ schedule.every().day.at("11:00").do(job)
+
+Curtir coisas da timeline
+ tweets = api.home_timeline(count=1)
+ tweet = tweets[0]
+ print(f"Curtindo tweet {tweet.id} of {tweet.author.name}")
+ api.create_favorite(tweet.id)
